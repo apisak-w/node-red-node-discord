@@ -49,7 +49,7 @@ export = (RED: Red) => {
             if (!processingAllowed) {
               if (message.channel.type.trim() !== 'dm') {
                 const channel = message.channel as NamedChannel;
-                if (!channels.includes(channel.id)) {
+                if (!channels.includes(channel.name)) {
                   processingAllowed = false;
                 } else {
                   processingAllowed = true;
